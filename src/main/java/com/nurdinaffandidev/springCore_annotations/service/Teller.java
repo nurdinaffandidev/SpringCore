@@ -1,10 +1,10 @@
-package com.nurdinaffandidev.springCore.service;
+package com.nurdinaffandidev.springCore_annotations.service;
 
-import com.nurdinaffandidev.springCore.models.Account;
-import com.nurdinaffandidev.springCore.models.User;
-import com.nurdinaffandidev.springCore.repository.AccountRepository;
-import com.nurdinaffandidev.springCore.repository.UserAccountRepository;
-import com.nurdinaffandidev.springCore.repository.UserRepository;
+import com.nurdinaffandidev.springCore_annotations.models.Account;
+import com.nurdinaffandidev.springCore_annotations.models.User;
+import com.nurdinaffandidev.springCore_annotations.repository.AccountRepository;
+import com.nurdinaffandidev.springCore_annotations.repository.UserAccountRepository;
+import com.nurdinaffandidev.springCore_annotations.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

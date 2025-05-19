@@ -1,17 +1,17 @@
-package com.nurdinaffandidev.springCore;
+package com.nurdinaffandidev.springCore_annotations;
 
-import com.nurdinaffandidev.springCore.models.Account;
-import com.nurdinaffandidev.springCore.models.User;
-import com.nurdinaffandidev.springCore.repository.AccountRepository;
-import com.nurdinaffandidev.springCore.repository.UserAccountRepository;
-import com.nurdinaffandidev.springCore.repository.UserRepository;
-import com.nurdinaffandidev.springCore.service.Teller;
+import com.nurdinaffandidev.springCore_annotations.models.Account;
+import com.nurdinaffandidev.springCore_annotations.models.User;
+import com.nurdinaffandidev.springCore_annotations.repository.AccountRepository;
+import com.nurdinaffandidev.springCore_annotations.repository.UserAccountRepository;
+import com.nurdinaffandidev.springCore_annotations.repository.UserRepository;
+import com.nurdinaffandidev.springCore_annotations.service.Teller;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
-import java.util.Objects;
 
 public class TellerApp {
     private static void printUsers(User... users) {
@@ -70,5 +70,8 @@ public class TellerApp {
 //        System.out.println("\nUser Repository: " + userRepository);
 //        System.out.println("Account Repository: " + accountRepository);
 //        System.out.println("UserAccount Repository: " + userAccountRepository);
+
+        // close container after using
+        ((AbstractApplicationContext) context).close();
     }
 }

@@ -1,6 +1,6 @@
-package com.nurdinaffandidev.springCore.repository;
+package com.nurdinaffandidev.springCore_annotations.repository;
 
-import com.nurdinaffandidev.springCore.models.Account;
+import com.nurdinaffandidev.springCore_annotations.models.Account;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;

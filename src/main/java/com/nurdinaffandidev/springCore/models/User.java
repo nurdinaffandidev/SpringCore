@@ -1,21 +1,20 @@
 package com.nurdinaffandidev.springCore.models;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
-import java.util.Objects;
-
-@Component
-@Scope("prototype")
 public class User {
     // Attributes
     private String name;
-    private long id;
+    private int age;
+    private Address address;
 
     // Constructor
-    public User(String name, long id) {
+    public User() {
+        super();
+    }
+
+    public User(String name, int age, Address address) {
         this.name = name;
-        this.id = id;
+        this.age = age;
+        this.address = address;
     }
 
     // Getter Setter
@@ -27,12 +26,20 @@ public class User {
         this.name = name;
     }
 
-    public long getId() {
-        return id;
+    public int getAge() {
+        return age;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     // Methods
@@ -40,19 +47,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
-                ", id=" + id +
+                ", age=" + age +
+                ", address=" + address +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return id == user.id && Objects.equals(name, user.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, id);
     }
 }

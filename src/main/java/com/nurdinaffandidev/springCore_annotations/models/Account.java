@@ -1,4 +1,4 @@
-package com.nurdinaffandidev.springCore.models;
+package com.nurdinaffandidev.springCore_annotations.models;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
