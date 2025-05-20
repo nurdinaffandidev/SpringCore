@@ -8,7 +8,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 
 public class App {
     public static void main(String[] args) {
-        //start String container
+        //start Spring container
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfiguration.class); //pass Spring Configuration class in param
 
         Address address2 = context.getBean(Address.class);
